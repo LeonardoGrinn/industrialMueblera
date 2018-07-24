@@ -1,0 +1,69 @@
+<section class="portafolio">
+
+
+  <!-- title -->
+  <h1 class="heading-primary">PROYECTOS</h1>
+
+  <div class="gallery__container">
+    <div class="gallery__thumbnail">
+      <!-- Gallery Thumbnails -->
+      <div class="gallery__item">
+        <!-- item 1-->
+        <img class="active" src="assets/img/gallery/1.png" alt="imagen-1" data-index="0">
+      </div>
+
+      <div class="gallery__item">
+        <!-- item 2 -->
+        <img src="assets/img/gallery/2.png" alt="imagen-2" data-index="1">
+      </div>
+
+      <div class="gallery__item">
+        <!-- item 3 -->
+        <img src="assets/img/gallery/3.png" alt="imagen-3" data-index="2">
+      </div>
+
+      <div class="gallery__item">
+        <!-- item 4 -->
+        <img src="assets/img/gallery/4.png" alt="imagen-4" data-index="3">
+      </div>
+
+      <div class="gallery__item">
+        <!-- item 5 -->
+        <img src="assets/img/gallery/5.png" alt="imagen-5" data-index="4">
+      </div>
+
+     
+    </div><!-- ./Gallery Thumbnails -->
+
+    <div class="gallery__visor">
+      <!-- Principal image displayer -->
+
+      <!-- Expand btn 
+                <img src="assets/img/ui-gallery/expand.svg" alt="expand button" class="ui-icons expand">
+                -->
+      <!-- Preview btn -->
+      <img src="assets/img/ui-gallery/back.svg" data-direction="left" alt="left-controller" class="ui-icons arrow arrow__preview">
+
+      <!-- Image Displayer -->
+      <img class="visor--img visor--mobile transition-fadeIn" src="assets/img/gallery/1.png" alt="zorro-1">
+
+      <!-- Next btn -->
+      <img src="assets/img/ui-gallery/next.svg" data-direction="right" alt="right-controller" class="ui-icons arrow arrow__next">
+
+    </div>
+    <!-- ./ Principal image displayer -->
+    
+  </div>
+
+  <div ng-init="logoImg = 'assets/img/logo/white-letters.svg'">
+    <img ng-src="{{logoImg}}" class="logo logo__about-us" />
+  </div>
+
+  <div class="footer footer__portafolio">
+    <p>MMXXVII Industrial Mueblera |
+      <span>©</span> Copyright 2018
+      <a href="http://leonardogrinn.com/">Leonardo Grinn</a>
+    </p>
+  </div>
+</section>
+

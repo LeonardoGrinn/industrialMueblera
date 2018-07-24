@@ -1,0 +1,16 @@
+.portafolio {
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-black;
+
+    h1 {
+        color: $color-white;
+        text-align: center;
+        padding-top: 1rem;
+
+        @include respond(phone) {
+            padding-top: 10vh;
+            margin-bottom: 5vh;
+        }
+    }
+}
