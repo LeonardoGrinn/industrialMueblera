@@ -186,7 +186,8 @@
             transform: rotate(-90deg);
             transform-origin: left top;
             width: 100vh;
-            overflow-x: hidden;
+            max-width: 100vh; /* Revisar :) */
+            //overflow-x: hidden;
             top: 100%;
             left: 0;
         }

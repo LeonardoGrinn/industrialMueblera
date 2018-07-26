@@ -3,7 +3,7 @@
     //background: linear-gradient(to right, #F4EFDD, #F4EFDD, white), 100%;
 
     @include respond(phone) {
-        overflow-x: hidden;
+        //overflow-x: hidden;
         grid-template-rows: 1fr 0.1fr 0.1fr;
     }
 
