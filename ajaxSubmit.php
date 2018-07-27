@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
   $message = $_POST['mensaje'];
 
 
-  $mailTo = "contacto@industrialmueblera.com"; //* contacto@industrialmueblera.com */
+  $mailTo = "contacto@industrialmueblera.com.mx"; //* contacto@industrialmueblera.com */
   $headers = "From: ".$mailFrom;
   $txt = "Has recibido un nuevo correo de: ".$name.".\n\n".$telephone.".\n\n".$message;
 

@@ -105,7 +105,7 @@
     /* Portrait tablet */
 
     @include respond(tab-port) {
-        margin-top: 11%;
+        padding-top: 10%;
     }
 }
 
@@ -178,7 +178,7 @@
         left: 0;
         background-color: #000;
         display: none;
-        z-index: 20; //margin-left: -11.1vw;
+        z-index: 2000; //margin-left: -11.1vw;
         transition: all 0.2s ease;
 
         /* Portrait tablet */
@@ -196,14 +196,15 @@
             width: 80vw;
             height: auto;
             /* Portrait tablet */
-
             @include respond(tab-port) {
-                width: 85vh;
+                width: 80vh;
             }
 
             @include respond(phone) {
-                width: 140vw;
+                width: 120vw;
             }
+
+            
         }
 
         .arrow__preview {
@@ -265,6 +266,11 @@
             @include respond(tab-port) {
                 width: 2.5vh;
                 opacity: 1;
+                right: 6vw;
+            }
+
+            @include respond(phone) {
+                right: 25vw;
             }
         }
 

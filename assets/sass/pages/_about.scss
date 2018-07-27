@@ -47,4 +47,8 @@
             }
         }
     }
+
+    @include respond(phone) {
+        max-height: 80vh;
+    }
 }

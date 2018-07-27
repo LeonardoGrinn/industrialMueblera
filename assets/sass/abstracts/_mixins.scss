@@ -103,6 +103,9 @@
     @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
   }*/
 
+    @if $breakpoint == iphone-x {
+        @media only screen and (max-width: 24em) and (min-height: 50em) {@content}; //600px
+    }
 
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content };    //600px

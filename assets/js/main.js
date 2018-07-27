@@ -1,5 +1,6 @@
 // Build module.
 var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
+let portafolioOn = false;
 
 // Routes configuration. 
 myApp.config(function($routeProvider) {
@@ -51,6 +52,7 @@ myApp.controller('aboutController', function ($scope) {
 
 myApp.controller('portafolioController', function ($scope) {
     /* Gallery Controller Variables */
+    
     let imageIndex = 0; // Current image.
     let displayImg = document.querySelector('.gallery__visor'); // Global Visor image displayer.
     let galleryImg = document.querySelectorAll('.gallery__item img'); // Select the thumbnail gallery image.
@@ -143,20 +145,9 @@ myApp.controller('portafolioController', function ($scope) {
     /* Call Full View Gallery Controller */
     document.querySelector('.gallery__visor .visor--img').addEventListener('click', fullView);
     document.querySelector('.close').addEventListener('click', closeFullView); //Call close full view function.
+    document.querySelector('.close').addEventListener('click', closeFullView); //Call close full view function.
 
 });
-
-myApp.controller('hotelController', function ($scope) {
-
-  });
-
-myApp.controller('barController', function ($scope) {
-
-  });
-
-myApp.controller('restaurantController', function ($scope) {
-
-  });
 
 myApp.controller('contactoController', function ($scope) {
 

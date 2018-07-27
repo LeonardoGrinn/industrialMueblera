@@ -12,6 +12,7 @@ showRight.onclick = function () {
     classie.toggle(menuRight, 'cbp-spmenu-open');
     disableOther('showRight');
     //activeMenu();
+
 };
 
 /* Hide menu */

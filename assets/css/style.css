@@ -1006,7 +1006,7 @@ body {
   }*/ }
   @media only screen and (max-width: 56.25em) {
     .visor--img {
-      margin-top: 11%; } }
+      padding-top: 10%; } }
 
 .visor--mobile {
   /*@if $breakpoint == full-desktop {
@@ -1262,7 +1262,7 @@ body {
   left: 0;
   background-color: #000;
   display: none;
-  z-index: 20;
+  z-index: 2000;
   transition: all 0.2s ease;
   /* Portrait tablet */
   /*@if $breakpoint == full-desktop {
@@ -1433,10 +1433,10 @@ body {
   }*/ }
     @media only screen and (max-width: 56.25em) {
       .full__view .visor--img {
-        width: 85vh; } }
+        width: 80vh; } }
     @media only screen and (max-width: 37.5em) {
       .full__view .visor--img {
-        width: 140vw; } }
+        width: 120vw; } }
   .full__view .arrow__preview {
     margin-left: 3vw;
     /*@if $breakpoint == full-desktop {
@@ -1781,11 +1781,66 @@ body {
 
     @if $breakpoint == iphone-x {
     @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
+  }*/
+    /*@if $breakpoint == full-desktop {
+        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 67.5em) { @content };    //1920px
+    }
+
+    @if $breakpoint == macbook-pro-15 {
+        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 75em) { @content };    //1920px
+    }
+
+    @if $breakpoint == large-desktop {
+        @media only screen and (max-width: 85.375em) { @content };    //1366px * 768
+    }
+
+    @if $breakpoint == medium-desktop {
+        @media only screen and (max-width: 81.25em) { @content };    //1300px 
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 73.75em) { @content };     //1180px * 780
+    }
+
+    @if $breakpoint == ipad {
+        @media only screen and (max-width: 50em), only screen and (hover: none) { @content };    //800
+    }
+
+    @if $breakpoint == ipad-pro {
+        @media only screen and (max-width: 64em) and (min-height: 85.375em) { @content };    //1024px
+    }
+
+    @if $breakpoint == ipad-landscape {
+        @media only screen and (min-width: 64em) and (min-height: 48em) { @content };    //800
+    }
+
+    @if $breakpoint == ipad-pro-landscape {
+        @media only screen and (min-width: 85.375em) and (min-height: 64em) { @content };    //1024px
+    }
+
+    @if $breakpoint == iphone-plus {
+        @media only screen and (max-width: 31.25em) { @content };    //500px
+    }
+
+    @if $breakpoint == iphone {
+        @media only screen and (max-width: 25em) { @content };    //400px
+    }
+
+    @if $breakpoint == iphone-se {
+        @media only screen and (max-width: 20em) { @content };    //400px
+    }
+
+    @if $breakpoint == iphone-x {
+    @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
   }*/ }
     @media only screen and (max-width: 56.25em) {
       .full__view .close {
         width: 2.5vh;
-        opacity: 1; } }
+        opacity: 1;
+        right: 6vw; } }
+    @media only screen and (max-width: 37.5em) {
+      .full__view .close {
+        right: 25vw; } }
   .full__view .close:hover {
     opacity: 1;
     transform: rotate(90deg);
@@ -4703,7 +4758,8 @@ button {
       background-size: 65%; } }
   @media only screen and (max-width: 37.5em) {
     .welcome[back-img] {
-      background: #fff !important; } }
+      background: #fff !important;
+      max-height: 85vh; } }
 
 .welcome h1 {
   position: absolute;
@@ -4886,11 +4942,7 @@ button {
       padding: 0 8vw;
       font-size: 1.5rem; } }
 
-.about-us[back-img] {
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-color: #F4EFDD;
+.about-us {
   /*@if $breakpoint == full-desktop {
         @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 67.5em) { @content };    //1920px
     }
@@ -4942,125 +4994,11 @@ button {
     @if $breakpoint == iphone-x {
     @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
   }*/ }
-  @media only screen and (max-width: 56.25em) {
-    .about-us[back-img] {
-      background: linear-gradient(to bottom, #F4EFDD, #F4EFDD, white) !important; } }
-
-.about-us__info {
-  display: grid;
-  grid-template-columns: 1.1fr 2fr 1.1fr;
-  /*@if $breakpoint == full-desktop {
-        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 67.5em) { @content };    //1920px
-    }
-
-    @if $breakpoint == macbook-pro-15 {
-        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 75em) { @content };    //1920px
-    }
-
-    @if $breakpoint == large-desktop {
-        @media only screen and (max-width: 85.375em) { @content };    //1366px * 768
-    }
-
-    @if $breakpoint == medium-desktop {
-        @media only screen and (max-width: 81.25em) { @content };    //1300px 
-    }
-
-    @if $breakpoint == desktop {
-        @media only screen and (max-width: 73.75em) { @content };     //1180px * 780
-    }
-
-    @if $breakpoint == ipad {
-        @media only screen and (max-width: 50em), only screen and (hover: none) { @content };    //800
-    }
-
-    @if $breakpoint == ipad-pro {
-        @media only screen and (max-width: 64em) and (min-height: 85.375em) { @content };    //1024px
-    }
-
-    @if $breakpoint == ipad-landscape {
-        @media only screen and (min-width: 64em) and (min-height: 48em) { @content };    //800
-    }
-
-    @if $breakpoint == ipad-pro-landscape {
-        @media only screen and (min-width: 85.375em) and (min-height: 64em) { @content };    //1024px
-    }
-
-    @if $breakpoint == iphone-plus {
-        @media only screen and (max-width: 31.25em) { @content };    //500px
-    }
-
-    @if $breakpoint == iphone {
-        @media only screen and (max-width: 25em) { @content };    //400px
-    }
-
-    @if $breakpoint == iphone-se {
-        @media only screen and (max-width: 20em) { @content };    //400px
-    }
-
-    @if $breakpoint == iphone-x {
-    @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
-  }*/ }
-  @media only screen and (max-width: 56.25em) {
-    .about-us__info {
-      grid-template-columns: 0.5fr 3fr 0.5fr; } }
-  .about-us__info h1 {
-    text-align: center;
-    margin-top: 5rem; }
-  .about-us__info p {
-    margin-top: 5rem;
-    font-size: 2rem;
-    letter-spacing: .1rem;
-    /*@if $breakpoint == full-desktop {
-        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 67.5em) { @content };    //1920px
-    }
-
-    @if $breakpoint == macbook-pro-15 {
-        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 75em) { @content };    //1920px
-    }
-
-    @if $breakpoint == large-desktop {
-        @media only screen and (max-width: 85.375em) { @content };    //1366px * 768
-    }
-
-    @if $breakpoint == medium-desktop {
-        @media only screen and (max-width: 81.25em) { @content };    //1300px 
-    }
-
-    @if $breakpoint == desktop {
-        @media only screen and (max-width: 73.75em) { @content };     //1180px * 780
-    }
-
-    @if $breakpoint == ipad {
-        @media only screen and (max-width: 50em), only screen and (hover: none) { @content };    //800
-    }
-
-    @if $breakpoint == ipad-pro {
-        @media only screen and (max-width: 64em) and (min-height: 85.375em) { @content };    //1024px
-    }
-
-    @if $breakpoint == ipad-landscape {
-        @media only screen and (min-width: 64em) and (min-height: 48em) { @content };    //800
-    }
-
-    @if $breakpoint == ipad-pro-landscape {
-        @media only screen and (min-width: 85.375em) and (min-height: 64em) { @content };    //1024px
-    }
-
-    @if $breakpoint == iphone-plus {
-        @media only screen and (max-width: 31.25em) { @content };    //500px
-    }
-
-    @if $breakpoint == iphone {
-        @media only screen and (max-width: 25em) { @content };    //400px
-    }
-
-    @if $breakpoint == iphone-se {
-        @media only screen and (max-width: 20em) { @content };    //400px
-    }
-
-    @if $breakpoint == iphone-x {
-    @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
-  }*/
+  .about-us[back-img] {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: #F4EFDD;
     /*@if $breakpoint == full-desktop {
         @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 67.5em) { @content };    //1920px
     }
@@ -5112,9 +5050,73 @@ button {
     @if $breakpoint == iphone-x {
     @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
   }*/ }
-    .about-us__info p span {
-      font-size: 2.2rem;
-      font-weight: 300;
+    @media only screen and (max-width: 56.25em) {
+      .about-us[back-img] {
+        background: linear-gradient(to bottom, #F4EFDD, #F4EFDD, white) !important; } }
+  .about-us__info {
+    display: grid;
+    grid-template-columns: 1.1fr 2fr 1.1fr;
+    /*@if $breakpoint == full-desktop {
+        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 67.5em) { @content };    //1920px
+    }
+
+    @if $breakpoint == macbook-pro-15 {
+        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 75em) { @content };    //1920px
+    }
+
+    @if $breakpoint == large-desktop {
+        @media only screen and (max-width: 85.375em) { @content };    //1366px * 768
+    }
+
+    @if $breakpoint == medium-desktop {
+        @media only screen and (max-width: 81.25em) { @content };    //1300px 
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 73.75em) { @content };     //1180px * 780
+    }
+
+    @if $breakpoint == ipad {
+        @media only screen and (max-width: 50em), only screen and (hover: none) { @content };    //800
+    }
+
+    @if $breakpoint == ipad-pro {
+        @media only screen and (max-width: 64em) and (min-height: 85.375em) { @content };    //1024px
+    }
+
+    @if $breakpoint == ipad-landscape {
+        @media only screen and (min-width: 64em) and (min-height: 48em) { @content };    //800
+    }
+
+    @if $breakpoint == ipad-pro-landscape {
+        @media only screen and (min-width: 85.375em) and (min-height: 64em) { @content };    //1024px
+    }
+
+    @if $breakpoint == iphone-plus {
+        @media only screen and (max-width: 31.25em) { @content };    //500px
+    }
+
+    @if $breakpoint == iphone {
+        @media only screen and (max-width: 25em) { @content };    //400px
+    }
+
+    @if $breakpoint == iphone-se {
+        @media only screen and (max-width: 20em) { @content };    //400px
+    }
+
+    @if $breakpoint == iphone-x {
+    @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
+  }*/ }
+    @media only screen and (max-width: 56.25em) {
+      .about-us__info {
+        grid-template-columns: 0.5fr 3fr 0.5fr; } }
+    .about-us__info h1 {
+      text-align: center;
+      margin-top: 5rem; }
+    .about-us__info p {
+      margin-top: 5rem;
+      font-size: 2rem;
+      letter-spacing: .1rem;
       /*@if $breakpoint == full-desktop {
         @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 67.5em) { @content };    //1920px
     }
@@ -5217,25 +5219,185 @@ button {
     @if $breakpoint == iphone-x {
     @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
   }*/ }
+      .about-us__info p span {
+        font-size: 2.2rem;
+        font-weight: 300;
+        /*@if $breakpoint == full-desktop {
+        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 67.5em) { @content };    //1920px
+    }
+
+    @if $breakpoint == macbook-pro-15 {
+        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 75em) { @content };    //1920px
+    }
+
+    @if $breakpoint == large-desktop {
+        @media only screen and (max-width: 85.375em) { @content };    //1366px * 768
+    }
+
+    @if $breakpoint == medium-desktop {
+        @media only screen and (max-width: 81.25em) { @content };    //1300px 
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 73.75em) { @content };     //1180px * 780
+    }
+
+    @if $breakpoint == ipad {
+        @media only screen and (max-width: 50em), only screen and (hover: none) { @content };    //800
+    }
+
+    @if $breakpoint == ipad-pro {
+        @media only screen and (max-width: 64em) and (min-height: 85.375em) { @content };    //1024px
+    }
+
+    @if $breakpoint == ipad-landscape {
+        @media only screen and (min-width: 64em) and (min-height: 48em) { @content };    //800
+    }
+
+    @if $breakpoint == ipad-pro-landscape {
+        @media only screen and (min-width: 85.375em) and (min-height: 64em) { @content };    //1024px
+    }
+
+    @if $breakpoint == iphone-plus {
+        @media only screen and (max-width: 31.25em) { @content };    //500px
+    }
+
+    @if $breakpoint == iphone {
+        @media only screen and (max-width: 25em) { @content };    //400px
+    }
+
+    @if $breakpoint == iphone-se {
+        @media only screen and (max-width: 20em) { @content };    //400px
+    }
+
+    @if $breakpoint == iphone-x {
+    @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
+  }*/
+        /*@if $breakpoint == full-desktop {
+        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 67.5em) { @content };    //1920px
+    }
+
+    @if $breakpoint == macbook-pro-15 {
+        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 75em) { @content };    //1920px
+    }
+
+    @if $breakpoint == large-desktop {
+        @media only screen and (max-width: 85.375em) { @content };    //1366px * 768
+    }
+
+    @if $breakpoint == medium-desktop {
+        @media only screen and (max-width: 81.25em) { @content };    //1300px 
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 73.75em) { @content };     //1180px * 780
+    }
+
+    @if $breakpoint == ipad {
+        @media only screen and (max-width: 50em), only screen and (hover: none) { @content };    //800
+    }
+
+    @if $breakpoint == ipad-pro {
+        @media only screen and (max-width: 64em) and (min-height: 85.375em) { @content };    //1024px
+    }
+
+    @if $breakpoint == ipad-landscape {
+        @media only screen and (min-width: 64em) and (min-height: 48em) { @content };    //800
+    }
+
+    @if $breakpoint == ipad-pro-landscape {
+        @media only screen and (min-width: 85.375em) and (min-height: 64em) { @content };    //1024px
+    }
+
+    @if $breakpoint == iphone-plus {
+        @media only screen and (max-width: 31.25em) { @content };    //500px
+    }
+
+    @if $breakpoint == iphone {
+        @media only screen and (max-width: 25em) { @content };    //400px
+    }
+
+    @if $breakpoint == iphone-se {
+        @media only screen and (max-width: 20em) { @content };    //400px
+    }
+
+    @if $breakpoint == iphone-x {
+    @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
+  }*/ }
+        @media only screen and (max-width: 56.25em) {
+          .about-us__info p span {
+            font-size: 3rem; } }
+        @media only screen and (max-width: 37.5em) {
+          .about-us__info p span {
+            font-size: 1.5rem; } }
       @media only screen and (max-width: 56.25em) {
-        .about-us__info p span {
+        .about-us__info p {
           font-size: 3rem; } }
       @media only screen and (max-width: 37.5em) {
-        .about-us__info p span {
-          font-size: 1.5rem; } }
-    @media only screen and (max-width: 56.25em) {
-      .about-us__info p {
-        font-size: 3rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .about-us__info p {
-        margin-top: 2rem;
-        font-size: 1.3rem; } }
+        .about-us__info p {
+          margin-top: 2rem;
+          font-size: 1.3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .about-us {
+      max-height: 80vh; } }
 
 .portafolio {
   width: 100vw;
   overflow-x: hidden;
   height: 100vh;
-  background-color: #000; }
+  overflow-y: none;
+  background-color: #000;
+  /*@if $breakpoint == full-desktop {
+        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 67.5em) { @content };    //1920px
+    }
+
+    @if $breakpoint == macbook-pro-15 {
+        @media only screen and (max-width: 120em) and (min-width: 120em) and (min-height: 75em) { @content };    //1920px
+    }
+
+    @if $breakpoint == large-desktop {
+        @media only screen and (max-width: 85.375em) { @content };    //1366px * 768
+    }
+
+    @if $breakpoint == medium-desktop {
+        @media only screen and (max-width: 81.25em) { @content };    //1300px 
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 73.75em) { @content };     //1180px * 780
+    }
+
+    @if $breakpoint == ipad {
+        @media only screen and (max-width: 50em), only screen and (hover: none) { @content };    //800
+    }
+
+    @if $breakpoint == ipad-pro {
+        @media only screen and (max-width: 64em) and (min-height: 85.375em) { @content };    //1024px
+    }
+
+    @if $breakpoint == ipad-landscape {
+        @media only screen and (min-width: 64em) and (min-height: 48em) { @content };    //800
+    }
+
+    @if $breakpoint == ipad-pro-landscape {
+        @media only screen and (min-width: 85.375em) and (min-height: 64em) { @content };    //1024px
+    }
+
+    @if $breakpoint == iphone-plus {
+        @media only screen and (max-width: 31.25em) { @content };    //500px
+    }
+
+    @if $breakpoint == iphone {
+        @media only screen and (max-width: 25em) { @content };    //400px
+    }
+
+    @if $breakpoint == iphone-se {
+        @media only screen and (max-width: 20em) { @content };    //400px
+    }
+
+    @if $breakpoint == iphone-x {
+    @media only screen and (max-width: 23.4375em) and  (min-height: 50.75em) { @content }; //375px
+  }*/ }
   .portafolio h1 {
     color: #fff;
     text-align: center;
@@ -5295,6 +5457,9 @@ button {
       .portafolio h1 {
         padding-top: 10vh;
         margin-bottom: 5vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .portafolio {
+      max-height: 90vh; } }
 
 .contact {
   /*@if $breakpoint == full-desktop {
@@ -5350,7 +5515,10 @@ button {
   }*/ }
   @media only screen and (max-width: 37.5em) {
     .contact {
-      grid-template-rows: 1fr 0.1fr 0.1fr; } }
+      grid-template-rows: 1fr 0.1fr 0.1fr;
+      max-height: 85vh;
+      overflow-x: none !important;
+      max-width: 100vw; } }
   .contact[back-img] {
     background-size: 40%;
     background-repeat: no-repeat;
