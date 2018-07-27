@@ -18,18 +18,6 @@ myApp.config(function($routeProvider) {
             templateUrl : 'vistas/portafolio.html',
             controller  : 'portafolioController'
         })
-        .when('/portafolio/hotel', {
-            templateUrl : 'vistas/portafolio/hotel.html',
-            controller  : 'hotelController'
-        })
-        .when('/portafolio/bar', {
-            templateUrl : 'vistas/portafolio/bar.html',
-            controller  : 'barController'
-        })
-        .when('/portafolio/restaurant', {
-            templateUrl : 'vistas/portafolio/restaurant.html',
-            controller  : 'restaurantController'
-        })
         .when('/contacto', {
             templateUrl : 'vistas/contacto.html',
             controller  : 'contactoController'
