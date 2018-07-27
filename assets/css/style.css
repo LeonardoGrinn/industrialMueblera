@@ -1249,9 +1249,9 @@ body {
     .arrow {
       width: 5.5vw; }
       .arrow__next {
-        transform: translate(44.5vw, 150%); }
+        transform: translate(44.5vw, 80%); }
       .arrow__preview {
-        transform: translate(-45vw, 150%); } }
+        transform: translate(-45vw, 80%); } }
 
 /* ============= F U L L  V I E W ============= */
 .full__view {
@@ -5459,7 +5459,7 @@ button {
         margin-bottom: 5vh; } }
   @media only screen and (max-width: 37.5em) {
     .portafolio {
-      max-height: 90vh; } }
+      max-height: 95vh; } }
 
 .contact {
   /*@if $breakpoint == full-desktop {
