@@ -11,6 +11,7 @@
         @include respond(phone) {
             background: $color-white !important;
             max-height: 85vh;
+            overflow-y: hidden !important;
         }
         
     }

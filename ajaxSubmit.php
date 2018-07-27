@@ -1,18 +1,32 @@
 
 <?php
-if (isset($_POST['submit'])) {
-  $name = $_POST['nombre'];
-  $mailFrom = $_POST['email'];
-  $telephone = $_POST['telefono'];
-  $message = $_POST['mensaje'];
+$name = $_POST['nombre'];
+$telephone = $_POST['telefono'];
+$mailFrom = $_POST['email'];
+$message = $_POST['mensaje'];
+
+$header = 'From: ' . $mailFrom . " \r\n";
+$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+$header .= "Mime-Version: 1.0 \r\n";
+$header .= "Content-Type: text/plain";
 
 
-  $mailTo = "contacto@industrialmueblera.com.mx"; //* contacto@industrialmueblera.com */
-  $headers = "From: ".$mailFrom;
-  $txt = "Has recibido un nuevo correo de: ".$name.".\n\n".$telephone.".\n\n".$message;
+$comentario .= "Este mensaje fue enviado por: " . $name . " \r\n";
+$comentario .= "Su e-mail es: " . $mailFrom . " \r\n";
+$comentario .= "Su telefono es: " . $telephone . " \r\n";
+$comentario .= "Su mensaje es: ". $message ." \r\n";
 
-  mail($mailTo, "Informacion para proyecto", $txt, $headers);
+$para = 'contacto@industrialmueblera.com.mx';
+$asunto = 'Contacto desde pagina web';
 
-  header("Location: index.php?mailsend");
+mail($para, $asunto, utf8_decode($comentario), $header);
 
-}
+// video validar
+$nombre = $_POST['nombre'];
+
+echo json_encode(array(
+    'Mensaje' => sprintf('Se ha recibido tu mensaje %s', $nombre),
+    header("Location: http://industrialmueblera.com.mx/#/"),
+    die(),
+));
+//* contacto@industrialmueblera.com.mx *//

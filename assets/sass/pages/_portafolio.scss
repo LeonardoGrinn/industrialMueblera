@@ -17,6 +17,7 @@
     }
 
     @include respond(phone) {
-        max-height: 95vh;
+        //max-height: 100vh;
+        overflow-y: hidden !important;
     }
 }
