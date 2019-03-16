@@ -2,9 +2,12 @@
 let menuRight = document.querySelector('.nav-s2'),
     showRight = document.querySelector('.nav-trigger'),
     main = document.querySelector('.main'),
-    navContainer = document.querySelectorAll('.nav-li-container li'),
+    navContainer = document.querySelectorAll('.link'),
     activeLink = 0,
-    body = document.body;
+    body = document.body,
+    linkCliked = document.querySelectorAll('.link');
+
+    /**/
 
 /* Show menu */
 showRight.onclick = function () {
@@ -13,13 +16,26 @@ showRight.onclick = function () {
     disableOther('showRight');
     //activeMenu();
 
+    
+
 };
+
+/* Hide when I cliked a link */
+for (let i = 0; i < linkCliked.length; i++) {
+
+    linkCliked[i].addEventListener('click', () => {
+        classie.toggle(showRight, 'active');
+        classie.remove(menuRight, 'cbp-spmenu-open');
+        classie.toggle(showRight, 'disabled');
+    }); 
+    
+}
 
 /* Hide menu */
 let disableOther = (button) => {
     if (button !== 'showRight') {
         classie.toggle(showRight, 'disabled');
-    }
+    } 
 }
 
 
@@ -36,5 +52,4 @@ let activeMenu = () => {
     }
 }
 */
-
 
